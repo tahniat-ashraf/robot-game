@@ -1,5 +1,7 @@
 # Robot Game
 
+Live demo : https://fierce-falls-59862.herokuapp.com/robot-game/
+
 Move the robot along the grid by giving it commands!
 
 Allowed commands - 
@@ -38,11 +40,7 @@ mvn clean
 mvn spring-boot:run
 ```
 
-Then, visit
-```aidl
-http://localhost:9086/robot-game/
-```
-from browser to play the game.
+Then, visit http://localhost:9086/robot-game/ from browser to play the game.
 
 <br/>
 Have fun!
