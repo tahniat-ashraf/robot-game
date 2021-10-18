@@ -1,0 +1,63 @@
+body{
+    font-family: 'Courier New', Courier, monospace
+}
+
+.grid-col{
+    background-color: beige;
+    height: 100px;
+    margin: 10px;
+}
+
+.title{
+    text-align: center;
+    padding: 10px 0 0 0;
+    color: #3c6e6e;
+}
+
+#grid {
+    margin: 10px 0;
+}
+
+#command{
+    background-color: #e5fbfb;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#commandText{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.grid-location{
+    color: #95d19f;
+    font-size: 10px;
+}
+
+.robot{
+    text-align: center;
+}
+
+.btn {
+    background-color: #3c6e6e;
+    color: aliceblue;
+    text-align: center;
+}
+
+#errorMessage{
+    padding: 20px 0;
+    text-align: center;
+    color: red;
+}
+
+.credit{
+    font-size: 12px;
+    text-align: center;
+    color: gray;
+    float: bottom;
+    padding-top: 50px;
+}
+
+a{
+    color: gray;
+}
