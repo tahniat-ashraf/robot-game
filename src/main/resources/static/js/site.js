@@ -1,20 +1,18 @@
 var app = new Vue({
     el: '#app',
     data: {
-        originalCommands: 'POSITION 1 3 EAST\n' +
-            'FORWARD 3\n' +
-            'WAIT\n' +
-            'TURNAROUND\n' +
+        originalCommands: 'POSITION 1 1 NORTH\n' +
             'FORWARD 1\n' +
-            'RIGHT\n' +
-            'FORWARD 2',
-        commands: 'POSITION 1 3 EAST\n' +
-            'FORWARD 3\n' +
             'WAIT\n' +
-            'TURNAROUND\n' +
+            'LEFT\n' +
             'FORWARD 1\n' +
-            'RIGHT\n' +
-            'FORWARD 2',
+            'TURNAROUND',
+        commands: 'POSITION 1 1 NORTH\n' +
+            'FORWARD 1\n' +
+            'WAIT\n' +
+            'LEFT\n' +
+            'FORWARD 1\n' +
+            'TURNAROUND',
         north: 'fab fa-android',
         east: 'fab fa-android fa-rotate-90',
         south: 'fab fa-android fa-rotate-180',
@@ -42,15 +40,16 @@ var app = new Vue({
 
             $(this.targetId).removeClass();
             this.errorMessageVisibility = 'none';
+            const url = window.location.href + "move";
 
-            axios.post("http://localhost:9086/robot-game/move",
+            axios.post(url,
                 {
                     "commands": this.commands
                 })
                 .then(response => {
                     console.log(response);
                     var xVal = response.data.position.xaxisPosition;
-                    var  yVal= response.data.position.yaxisPosition;
+                    var yVal = response.data.position.yaxisPosition;
                     var classVal = this.getClassByDirection(response.data.position.direction);
                     this.targetId = "#" + xVal + "" + yVal;
                     console.log("targetId " + this.targetId);
